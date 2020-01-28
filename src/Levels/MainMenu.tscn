@@ -1,0 +1,129 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Levels/MainMenu.gd" type="Script" id=1]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.192157, 0.192157, 0.192157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="ColorRect"]
+anchor_right = 1.0
+margin_bottom = 80.0
+text = "Wolf O'Donnel on a Bike: The Video Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="ColorRect"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = -120.0
+margin_right = -80.0
+margin_bottom = -40.0
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Settings" type="Button" parent="ColorRect"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = -240.0
+margin_right = -80.0
+margin_bottom = -160.0
+text = "Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGame" type="Button" parent="ColorRect"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = -480.0
+margin_right = -80.0
+margin_bottom = -400.0
+text = "New Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadGame" type="Button" parent="ColorRect"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = -360.0
+margin_right = -80.0
+margin_bottom = -280.0
+text = "Load Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -207.5
+margin_top = -50.0
+margin_right = 207.5
+margin_bottom = 50.0
+window_title = ""
+dialog_text = "Are you sure you want to quit?"
+dialog_hide_on_ok = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FadeTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="LoadingScreen" type="Panel" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Tip" type="Label" parent="LoadingScreen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+text = "this the loading screen"
+align = 1
+valign = 1
+
+[node name="FadeBlack" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+color = Color( 0, 0, 0, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ColorRect/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="ColorRect/Settings" to="." method="_on_Settings_pressed"]
+[connection signal="pressed" from="ColorRect/NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="ColorRect/LoadGame" to="." method="_on_LoadGame_pressed"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_ConfirmationDialog_confirmed"]
+[connection signal="timeout" from="FadeTimer" to="." method="_on_FadeTimer_timeout"]

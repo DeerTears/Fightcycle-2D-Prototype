@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/desert.5.map-b8627bb7f62084d4fb69ae27e8e651ed.tres"
+
+[deps]
+
+source_file="res://assets/qodotmaps/autosave/desert.5.map"
+dest_files=[ "res://.import/desert.5.map-b8627bb7f62084d4fb69ae27e8e651ed.tres" ]
+
+[params]
+
