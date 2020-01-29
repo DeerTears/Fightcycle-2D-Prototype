@@ -707,12 +707,5 @@ omni_range = 16.0
 
 [node name="Actors" type="Node" parent="."]
 
-[node name="CSGCylinder" type="CSGCylinder" parent="Actors"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 100.913, -41.8552, -60.4155 )
-radius = 8.81637
-height = 20.0771
-sides = 16
-cone = true
-
 [node name="KinematicBody" parent="Actors" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22427, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.77573, 8, 0 )
