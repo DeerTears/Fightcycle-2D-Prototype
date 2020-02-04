@@ -1,0 +1,13 @@
+[remap]
+
+importer="qodot.map"
+type="Resource"
+path="res://.import/csgodot.map-3c07ac8ff5db57263b043ff12ed2861a.tres"
+
+[deps]
+
+source_file="res://assets/qodotmaps/csgodot.map"
+dest_files=[ "res://.import/csgodot.map-3c07ac8ff5db57263b043ff12ed2861a.tres" ]
+
+[params]
+
